@@ -58,7 +58,7 @@ jobs:
       # Run your test
       - name: Check Documentation
         run: |
-          if ls *.md 2>/dev/null | grep -qv '^Documentation';
+          if ls *.md 2>/dev/null | grep -qv '^Documentation'; then\
             echo "Should contain documentation"
             exit 1
           fi
